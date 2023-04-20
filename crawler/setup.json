@@ -1,0 +1,27 @@
+{
+    "twitter_connections":[
+        {
+        "connection":"1", 
+        "user":"",
+        "consumer_key": "",
+        "consumer_secret": "",
+        "bearer_token": "",
+        "access_token": "",
+        "access_token_secret":"",
+        "filter_rules":
+            [
+
+            ]
+        }            
+    ],
+    "postgres_connections":[
+        {
+            "host":"",
+            "user":"",
+            "password":"",
+            "database":""
+        }
+    ]
+     
+}
+ 
