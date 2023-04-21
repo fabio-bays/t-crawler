@@ -11,9 +11,13 @@ class twitter_credentials:
         self.filter_rules=filter_rules
 
 class postgres_credentials:
-    def __init__(self, user, password, host, database):
+    def __init__(self, user, password, host, database, schema, tweets_table,
+                 rules_table):
         self.user = user
         self.password = password
         self.host = host
         self.database = database
+        self.schema = schema
+        self.tweets_table = tweets_table
+        self.rules_table = rules_table
     

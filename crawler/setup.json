@@ -19,7 +19,10 @@
             "host":"",
             "user":"",
             "password":"",
-            "database":""
+            "database":"",
+            "schema":"",
+            "tweets_table":"",
+            "rules_table":""
         }
     ]
      

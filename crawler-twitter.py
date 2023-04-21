@@ -34,7 +34,10 @@ def main():
                                                 user=postgres_connection['user'],
                                                 host=postgres_connection['host'],
                                                 password=postgres_connection['password'],
-                                                database=postgres_connection['database']))
+                                                database=postgres_connection['database'],
+                                                schema=postgres_connection['schema'],
+                                                tweets_table=postgres_connection['tweets_table'],
+                                                rules_table=postgres_connection['rules_table']))
     
     # Just one twitter api connection will be used, for now
     warp(twitter_credentials=twitter_credentials_list[0], 

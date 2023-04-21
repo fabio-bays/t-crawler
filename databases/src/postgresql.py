@@ -6,8 +6,15 @@ pg.extensions.register_adapter(dict, psycopg2.extras.Json)
 
 class postgres_db():
     def __init__(self,postgres_credentials):
-        self.SAVE_TWEET_JSON = 'INSERT INTO prepro_sch.tweets_json (tweet) VALUES (%s)'
-        self.SAVE_RULE_JSON = 'INSERT INTO prepro_sch.rules_json (rule) VALUES (%s)'
+        self.schema = postgres_credentials[0].schema
+        self.tweets_table = postgres_credentials[0].tweets_table
+        self.rules_table = postgres_credentials[0].rules_table
+
+        self.SAVE_TWEET_JSON = 'INSERT INTO {sch}.{table} VALUES (%s)' \
+            ''.format(sch=self.schema,table=self.tweets_table)
+        self.SAVE_RULE_JSON = 'INSERT INTO {sch}.{table} VALUES (%s)' \
+            ''.format(sch=self.schema,table=self.rules_table)
+        
         self.db_connection = None
         self.dbcursor = None
         
