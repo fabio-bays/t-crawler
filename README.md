@@ -17,7 +17,7 @@ For `twitter_connections`, only a Twitter API's user bearer token, and filter ru
 
 To get a bearer token, you will need a [developer account](https://developer.twitter.com/en/docs/tutorials/step-by-step-guide-to-making-your-first-request-to-the-twitter-api-v2) in Twitter.
 
-Each filter rule is a dictionary json object, nested inside a list of rules. They have the value and tag keys, with their values being strings. A tag key is neccessary, but its value can be left empty. If there are no filter rules, the crawler will not execute. See [how to build a rule](https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule). 
+Each filter rule is a dictionary json object, nested inside a list of rules. They have the value and tag keys, with their values being strings. A tag key is necessary, but its value can be left empty. If there are no filter rules, the crawler will not execute. See [how to build a rule](https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule). 
 
 
 For `postgres_connections`, every key needs a value. The values are all of type string. 
